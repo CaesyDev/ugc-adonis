@@ -22,11 +22,7 @@ import Route from '@ioc:Adonis/Core/Route'
 const API_VERSION: string = "/api/v1"
 
 
-
-Route.post(`${API_VERSION}/register`, 'AuthController.register')
-
-Route.get('/', async () => {
-  return { hello: 'world' }
-})
-
-
+Route.post(`${API_VERSION}/register`, 'AuthController.register');
+Route.post(`${API_VERSION}/login`, 'AuthController.login');
+Route.post(`${API_VERSION}/logout`, 'AuthController.logout');
+Route.get(`${API_VERSION}/dashboard`, 'AuthController.dashboard');
